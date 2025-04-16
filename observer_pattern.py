@@ -13,7 +13,7 @@ class Subject:
     def unsubscribe(self, observer):
         self._observers.remove(observer)
     
-    def notifiy(self, message):
+    def notify(self, message):
         for observer in self._observers:
             observer.update(message)
 
@@ -35,4 +35,4 @@ faculty = Faculty()
 fau_podcast_service.subscribe(student)
 fau_podcast_service.subscribe(faculty)
 
-fau_podcast_service.notifiy("Breaking news: Observer pattern is awesome !!!")
+fau_podcast_service.notify("Breaking news: Observer pattern is awesome !!!")
